@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Tabela FIPE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Consulta Tabela FIPE</h1>
+        
+        <div class="form-group">
+            <select id="tipoVeiculo">
+                <option value="">Selecione o tipo de veículo</option>
+                <option value="carros">Carros</option>
+                <option value="motos">Motos</option>
+                <option value="caminhoes">Caminhões</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <select id="marcas" disabled>
+                <option value="">Selecione a marca</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <select id="modelos" disabled>
+                <option value="">Selecione o modelo</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <select id="anos" disabled>
+                <option value="">Selecione o ano</option>
+            </select>
+        </div>
+        
+        <button id="consultar" disabled>Consultar</button>
+        
+        <div class="loading">
+            <div class="spinner"></div>
+            <p>Carregando...</p>
+        </div>
+        
+        <div class="error" id="error-message"></div>
+        
+        <div class="result" id="result">
+            <h2>Resultado da Consulta</h2>
+            <p><strong>Marca:</strong> <span id="result-marca"></span></p>
+            <p><strong>Modelo:</strong> <span id="result-modelo"></span></p>
+            <p><strong>Ano:</strong> <span id="result-ano"></span></p>
+            <p><strong>Combustível:</strong> <span id="result-combustivel"></span></p>
+            <p><strong>Valor:</strong> <span id="result-valor"></span></p>
+            <p><strong>Código FIPE:</strong> <span id="result-fipe"></span></p>
+            <p><strong>Referência:</strong> <span id="result-referencia"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
