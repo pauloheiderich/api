@@ -1,156 +1,163 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
-  
-  body {
-    background-color: #000;
-    color: #fff;
-    overflow-x: hidden;
-  }
-  
-  /* HEADER */
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    padding: 15px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff;
-  }
-  
-  .nav {
-    display: flex;
-    gap: 40px;
-    list-style: none;
-    position: relative;
-  }
-  
-  .nav-item {
-    position: relative;
-  }
-  
-  .nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
-  }
-  
-  .nav a:hover {
-    color: #ff6b6b;
-  }
-  
-  /* Dropdown Menu */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 10px 20px;
-    border-radius: 6px;
-    min-width: 150px;
-    z-index: 10000;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  }
-  
-  .nav-item:hover .dropdown-content {
-    display: block;
-  }
-  
-  /* CARROSSEL */
-  .carousel-inner > .carousel-item {
-    height: 650px;
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-  }
-  
-  /* FORMULÁRIO */
-  .container.mt-5.pt-5 {
-    position: relative;
-    z-index: 10;
-  }
-  
-  .row.g-3.mb-4 select,
-  .row.g-3.mb-4 button {
-    background-color: #222 !important;
-    color: #fff !important;
-    border-radius: 8px;
-    border: none !important;
-  }
-  
-  .row.g-3.mb-4 select:disabled {
-    background-color: #444 !important;
-  }
-  
-  .btn-danger:disabled {
-    background-color: #555 !important;
-    cursor: not-allowed;
-  }
-  
-  /* RESULTADO */
-  #result {
-    max-width: 1400px;
-    margin: 20px auto 100px auto;
-    background: rgba(20, 20, 20, 0.85);
-    border-radius: 12px;
-    color: #fff;
-  }
-  
-  /* LOADING */
-  .loading {
-    color: #ff6b6b;
-    text-align: center;
-    margin-top: 15px;
-  }
-  
-  /* RESPONSIVO */
-  @media (max-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background-color: #000;
+        color: #fff;
+        overflow-x: hidden;
+    }
+
+    /* HEADER */
     .header {
-      padding: 15px 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        padding: 15px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
-  
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff;
+    }
+
     .nav {
-      display: none;
+        display: flex;
+        gap: 40px;
+        list-style: none;
+        position: relative;
     }
-  
-    #carouselExampleDark {
-      height: 450px !important;
+
+    .nav-item {
+        position: relative;
     }
-  
+
+    .nav a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: color 0.3s ease;
+    }
+
+    .nav a:hover {
+        color: #ff6b6b;
+    }
+
+    /* Dropdown Menu */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 10px 20px;
+        border-radius: 6px;
+        min-width: 150px;
+        z-index: 10000;
+        color: white;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    .nav-item:hover .dropdown-content {
+        display: block;
+    }
+
+    /* CARROSSEL */
     .carousel-inner > .carousel-item {
-      height: 450px;
+        height: 450px; /* aumentou bastante */
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
     }
-  }
-  
-  /* RODAPÉ */
-  .footer {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 20px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-  }
+
+    /* FORMULÁRIO */
+    .container.mt-5.pt-5 {
+        position: relative;
+        z-index: 10;
+        padding-top: 1rem !important; /* menos espaçamento */
+        margin-top: 1rem !important;  /* menos espaçamento */
+    }
+
+    h1.text-center.mb-4 {
+        margin-top: 0.2rem !important; /* bem pouco espaço */
+        margin-bottom: 1rem !important;
+    }
+
+    .row.g-3.mb-4 select,
+    .row.g-3.mb-4 button {
+        background-color: #222 !important;
+        color: #fff !important;
+        border-radius: 8px;
+        border: none !important;
+    }
+
+    .row.g-3.mb-4 select:disabled {
+        background-color: #444 !important;
+    }
+
+    .btn-danger:disabled {
+        background-color: #555 !important;
+        cursor: not-allowed;
+    }
+
+    /* RESULTADO */
+    #result {
+        max-width: 1400px;
+        margin: 20px auto 100px auto;
+        background: rgba(20, 20, 20, 0.85);
+        border-radius: 12px;
+        color: #fff;
+    }
+
+    /* LOADING */
+    .loading {
+        color: #ff6b6b;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 768px) {
+        .header {
+            padding: 15px 20px;
+        }
+
+        .nav {
+            display: none;
+        }
+
+        #carouselExampleDark {
+            height: 350px !important;
+        }
+
+        .carousel-inner > .carousel-item {
+            height: 350px;
+        }
+    }
+
+    /* RODAPÉ */
+    .footer {
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 20px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
